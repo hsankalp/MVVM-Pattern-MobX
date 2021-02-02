@@ -1,4 +1,4 @@
-import { Store } from "../../pages/store/store";
+import { Store } from "../../store/store";
 import { makeObservable, observable, action } from "mobx";
 
 class ViewModel {

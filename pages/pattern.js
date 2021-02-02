@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Pattern from "../components/History/index";
 import Result from "../components/Result/index";
-import { Store, Context } from "../pages/store/store";
+import { Store, Context } from "../store/store";
 import styled from "styled-components";
 
 export default function Home() {

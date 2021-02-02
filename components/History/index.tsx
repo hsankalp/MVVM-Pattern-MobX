@@ -1,6 +1,6 @@
 import React, { FC, useContext } from "react";
 import View from "./View";
-import { Context } from "../../pages/store/store";
+import { Context } from "../../store/store";
 import ViewModel from "./ViewModel";
 
 const History: FC = () => {

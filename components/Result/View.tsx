@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Store } from "../../pages/store/store";
+import { Store } from "../../store/store";
 import { observer } from "mobx-react";
 import styled from "styled-components";
 
