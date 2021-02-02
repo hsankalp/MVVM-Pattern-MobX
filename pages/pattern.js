@@ -14,6 +14,18 @@ export default function Home() {
     gap: 32px;
   `;
 
+  const Wrapper = styled.div`
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  `;
+
   return (
     <div>
       <Head>
@@ -24,8 +36,12 @@ export default function Home() {
       <main>
         <Context.Provider value={store}>
           <Container>
-            <Pattern />
-            <Result />
+            <Wrapper>
+              <Pattern />
+            </Wrapper>
+            <Wrapper>
+              <Result />
+            </Wrapper>
           </Container>
         </Context.Provider>
       </main>

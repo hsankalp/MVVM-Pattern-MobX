@@ -8,15 +8,6 @@ interface Props {
   viewModel: ViewModel;
 }
 
-const Container = styled.div`
-  width: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
-
 const Values = styled.p`
   margin: 0;
   font-size: 12px;
@@ -38,24 +29,24 @@ const HistoryView: FC<Props> = ({ viewModel }) => {
   const handleClickValue2 = (): void => handleChangeVal2();
 
   return (
-    <Container>
+    <>
       <h2>Component #1</h2>
       <button onClick={handleClickValue1}>Action Change Value 1</button>
       <button onClick={handleClickValue2}>Action Change Value 2</button>
+      <h4>Local State:</h4>
       <Values>
-        <strong>Local State Value 1 History:</strong>
+        <strong>Value 1 History:</strong>
         <br /> {formatValue(value1History)}
       </Values>
       <Values>
-        <strong>Local State Value 2 History:</strong>
+        <strong>Value 2 History:</strong>
         <br /> {formatValue(value2History)}
       </Values>
-      <hr></hr>
       <Values>
-        <strong>Local State Sum History:</strong>
+        <strong>Sum History:</strong>
         <br /> {formatValue(sumHistory)}
       </Values>
-    </Container>
+    </>
   );
 };
 
