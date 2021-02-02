@@ -18,6 +18,10 @@ class ViewModel {
     });
   }
 
+  formatValue(value: number[]): string {
+    return value.join(", ");
+  }
+
   handleChangeVal1 = (): void => {
     this.store.changeValue1();
     this.value1History.push(this.store.value1);
